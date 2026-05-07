@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apples_mine_bz r</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+/* 🌌 CINEMATIC BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+
+  background: url("https://wallpapercave.com/wp/wp2757874.jpg") center/cover no-repeat;
+  animation: bgMove 30s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+  0% { background-position: center; background-size: 100%; }
+  100% { background-position: top; background-size: 115%; }
+}
+
+/* dark overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(0,255,150,0.18), rgba(0,0,0,0.92));
+  z-index: -1;
+}
+
+/* entry animation */
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADER */
+header {
+  padding: 60px 20px 20px;
+  animation: floatIn 1s ease;
+}
+
+/* 🔥 LOGO FIXED */
+.logo-text {
+  font-size: 28px;
+  color: #00cc66;
+  text-shadow: 0 0 10px #00cc66, 0 0 25px #00994d;
+  animation: logoFloat 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes logoFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.ip {
+  font-size: 12px;
+  margin-top: 10px;
+  animation: floatIn 1.2s ease;
+}
+
+button {
+  margin: 6px;
+  padding: 12px 18px;
+  border: none;
+  font-size: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: floatIn 1.4s ease;
+}
+
+button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px #00cc66;
+}
+
+.copy { background:#00cc66; color:black; }
+.join { background:orange; }
+.discord { background:#5865F2; color:white; }
+
+.section {
+  width: 90%;
+  max-width: 720px;
+  margin: 18px auto;
+  padding: 20px;
+  border-radius: 15px;
+
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 25px rgba(0,204,102,0.4);
+
+  animation: floatIn 1s ease;
+  text-align: left;
+}
+
+.section:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+  box-shadow: 0 0 40px #00cc66;
+}
+
+.section h2 {
+  color: #00cc66;
+  font-size: 13px;
+}
+
+.section p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #00cc66;
+}
+
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  animation: logoFloat 3s infinite ease-in-out;
+}
+
+.floating button {
+  background: #5865F2;
+  color: white;
+  box-shadow: 0 0 25px #5865F2;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 10px;
+  color: gray;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <!-- ✅ FIXED LOGO -->
+  <div class="logo">
+    <div class="logo-text">Apples_mine_bz</div>
+  </div>
+
+  <div class="ip">APPLES.mine.bz:19133</div>
+
+  <div>
+    <button class="copy" onclick="copyIP()">📋 Copy IP</button>
+    <button class="join">🎮 Join Server</button>
+  </div>
+
+  <div class="status" id="status">🟡 Loading server...</div>
+</header>
+
+<div class="section">
+  <h2>🛒 Server Shop</h2>
+  <p>Advanced economy system with smooth gameplay experience.</p>
+</div>
+
+<div class="section">
+  <h2>🎮 Gameplay</h2>
+  <p>PvP ⚔️ and Survival 🌿 modes with ultra smooth performance.</p>
+</div>
+
+<div class="section">
+  <h2>🚀 Features</h2>
+  <p>
+    🚀 Fast teleport system<br>
+    ⚡ No lag experience<br>
+    🌍 Active community<br>
+    🔥 Regular updates
+  </p>
+</div>
+
+<div class="section">
+  <h2>🏆 Top Server</h2>
+  <p>Ranked among Top Minecraft servers in Bangladesh 🇧🇩</p>
+</div>
+
+<div class="section">
+  <h2>📞 Contact</h2>
+  <p>Email: turhanje@gmail.com<br>Phone: 01712308731</p>
+</div>
+
+<div class="section">
+  <h2>🆘 Help Section</h2>
+  <p>
+    If you need any help or support, please contact our team.<br>
+    You can ask questions about server joining, gameplay issues, or technical problems.<br>
+    Our support team will assist you as soon as possible.
+  </p>
+</div>
+
+<footer>
+Owner: Rea_Flex | Moderator: Turhan
+</footer>
+
+<div class="floating">
+  <a href="https://discord.gg/wKdVJ9cX" target="_blank">
+    <button>💬 Discord</button>
+  </a>
+</div>
+
+<script>
+
+function copyIP() {
+  navigator.clipboard.writeText("APPLES.mine.bz:19133");
+  alert("IP Copied!");
+}
+
+fetch("https://api.mcsrvstat.us/bedrock/2/APPLES.mine.bz:19133")
+.then(res => res.json())
+.then(data => {
+  if (data.online) {
+    document.getElementById("status").innerHTML =
+      "🟢 Online | Players: " + data.players.online + "/" + data.players.max;
+  } else {
+    document.getElementById("status").innerHTML = "🔴 online";
+  }
+})
+.catch(() => {
+  document.getElementById("status").innerHTML = "⚠️ Error";
+});
+
+</script>
+
+</body>
+</html>
